@@ -5,10 +5,6 @@ dependencies {
     compile "io.vertx:vertx-sockjs-service-proxy:$vertxVersion"
 }
 
-task bower(type: Exec) {
-    workingDir "${project.projectDir}/src/main/resources/webroot"
-    commandLine "bower", "install", "--allow-root"
-}
 
 compileJava {
     dependsOn bower
